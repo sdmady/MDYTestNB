@@ -9,11 +9,12 @@ Pod::Spec.new do |s|
   #s.source_files = "MDYTestNB/*.{h,m}" # 你代码的位置， BYPhoneNumTF/*.{h,m} 表示 BYPhoneNumTF 文件夹下所有的.h和.m文件
   s.requires_arc = true # 是否启用ARC
   s.platform     = :ios, "7.0" #平台及支持的最低版本
-  s.frameworks   = "UIKit", "Foundation" #支持的框架
+  s.frameworks   = "UIKit", "SystemConfiguration" #支持的框架
   # s.dependency = "AFNetworking" # 依赖库
-  
-  s.ios.vendored_frameworks = 'JDCrash/JDCrash.framework'
-  s.vendored_frameworks = 'JDCrash.framework'
+  s.libraries = 'z', 'c++'
+
+  #s.ios.vendored_frameworks = 'JDCrash/JDCrash.framework'
+  s.vendored_frameworks = 'JDCrash/JDCrash.framework'
 
   # User
   s.author             = { "MDY" => "sdmady@163.com" } # 作者信息
